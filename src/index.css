@@ -2,41 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Confidential Token Vesting Platform Design System
+All colors MUST be HSL for encryption-themed dark UI.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Dark encryption theme */
+    --background: 220 13% 9%;
+    --foreground: 220 9% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 13% 11%;
+    --card-foreground: 220 9% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 13% 11%;
+    --popover-foreground: 220 9% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Cyan encryption accent */
+    --primary: 191 91% 55%;
+    --primary-foreground: 220 13% 9%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Dark secondary */
+    --secondary: 220 13% 15%;
+    --secondary-foreground: 220 9% 85%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 13% 15%;
+    --muted-foreground: 220 9% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Bright accent for highlights */
+    --accent: 191 91% 55%;
+    --accent-foreground: 220 13% 9%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 220 9% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 13% 20%;
+    --input: 220 13% 15%;
+    --ring: 191 91% 55%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom encryption theme colors */
+    --glow-primary: 191 91% 55%;
+    --glow-secondary: 271 91% 65%;
+    --surface-glass: 220 13% 15%;
+    --surface-elevated: 220 13% 13%;
+    --text-encrypted: 191 50% 70%;
+    --text-success: 142 76% 55%;
+    --text-warning: 48 96% 65%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(191 91% 55%), hsl(271 91% 65%));
+    --gradient-glow: linear-gradient(135deg, hsl(191 91% 55% / 0.3), hsl(271 91% 65% / 0.3));
+    --gradient-surface: linear-gradient(135deg, hsl(220 13% 15%), hsl(220 13% 11%));
+
+    /* Shadows and glows */
+    --shadow-glow: 0 0 30px hsl(191 91% 55% / 0.3);
+    --shadow-elevated: 0 10px 30px -10px hsl(220 13% 5% / 0.8);
+    --shadow-glass: 0 8px 32px hsl(220 13% 5% / 0.5);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +127,81 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-mono;
+  }
+}
+
+@layer components {
+  /* Glass morphism card effect */
+  .glass-card {
+    @apply bg-gradient-to-br from-surface-glass/50 to-surface-elevated/30 backdrop-blur-xl border border-border/50;
+    box-shadow: var(--shadow-glass);
+  }
+
+  /* Glowing elements */
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Encrypted text effect */
+  .text-encrypted {
+    @apply text-[hsl(var(--text-encrypted))] font-mono tracking-wider;
+  }
+
+  /* Success/warning text */
+  .text-success {
+    @apply text-[hsl(var(--text-success))];
+  }
+
+  .text-warning {
+    @apply text-[hsl(var(--text-warning))];
+  }
+
+  /* Gradient backgrounds */
+  .bg-gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .bg-gradient-glow {
+    background: var(--gradient-glow);
+  }
+
+  .bg-gradient-surface {
+    background: var(--gradient-surface);
+  }
+
+  /* Spinning animation for clocks */
+  .spin-slow {
+    animation: spin 4s linear infinite;
+  }
+
+  /* Pulse glow animation */
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(191 91% 55% / 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px hsl(191 91% 55% / 0.6);
+    }
+  }
+
+  /* Digital code text effect */
+  .digital-text {
+    @apply font-mono text-primary;
+    text-shadow: 0 0 10px hsl(191 91% 55% / 0.5);
+  }
+
+  /* Hover effects */
+  .hover-glow {
+    transition: var(--transition-smooth);
+  }
+
+  .hover-glow:hover {
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px);
   }
 }

@@ -57,6 +57,14 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Encryption theme custom colors
+        "glow-primary": "hsl(var(--glow-primary))",
+        "glow-secondary": "hsl(var(--glow-secondary))",
+        "surface-glass": "hsl(var(--surface-glass))",
+        "surface-elevated": "hsl(var(--surface-elevated))",
+        "text-encrypted": "hsl(var(--text-encrypted))",
+        "text-success": "hsl(var(--text-success))",
+        "text-warning": "hsl(var(--text-warning))",
       },
       borderRadius: {
         lg: "var(--radius)",
