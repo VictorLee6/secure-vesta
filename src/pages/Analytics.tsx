@@ -1,7 +1,9 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
-import { TrendingUp, BarChart3, PieChart, Activity, Calendar, Target } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { TrendingUp, BarChart3, PieChart, Activity, Calendar, Target, Download, RefreshCw, Settings } from "lucide-react";
 
 const Analytics = () => {
   const analyticsData = [
@@ -73,10 +75,28 @@ const Analytics = () => {
         <div className="container mx-auto">
           {/* Header */}
           <div className="mb-8">
-            <h1 className="text-4xl font-bold mb-2 digital-text">Analytics Dashboard</h1>
-            <p className="text-muted-foreground">
-              Comprehensive insights into your vesting performance and portfolio metrics
-            </p>
+            <div className="flex items-center justify-between">
+              <div>
+                <h1 className="text-4xl font-bold mb-2 digital-text">Analytics Dashboard</h1>
+                <p className="text-muted-foreground">
+                  Comprehensive insights into your vesting performance and portfolio metrics
+                </p>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Button variant="outline" size="sm">
+                  <RefreshCw className="w-4 h-4 mr-2" />
+                  Refresh
+                </Button>
+                <Button variant="outline" size="sm">
+                  <Download className="w-4 h-4 mr-2" />
+                  Export
+                </Button>
+                <Button variant="outline" size="sm">
+                  <Settings className="w-4 h-4 mr-2" />
+                  Settings
+                </Button>
+              </div>
+            </div>
           </div>
 
           {/* Key Metrics */}

@@ -3,7 +3,8 @@ import Footer from "@/components/Footer";
 import VestingCard from "@/components/VestingCard";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Plus, FileText, Download } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Plus, FileText, Download, Filter, Search, Settings, Calendar } from "lucide-react";
 
 const MyVesting = () => {
   const myVestingSchedules = [
@@ -70,6 +71,14 @@ const MyVesting = () => {
               <Button variant="outline">
                 <Download className="w-4 h-4 mr-2" />
                 Export Report
+              </Button>
+              <Button variant="outline" size="sm">
+                <Filter className="w-4 h-4 mr-2" />
+                Filter
+              </Button>
+              <Button variant="outline" size="sm">
+                <Search className="w-4 h-4 mr-2" />
+                Search
               </Button>
             </div>
           </div>
