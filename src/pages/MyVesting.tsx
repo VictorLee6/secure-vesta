@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Plus, FileText, Download, Filter, Search, Settings, Calendar } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const MyVesting = () => {
   const myVestingSchedules = [
@@ -60,18 +61,24 @@ const MyVesting = () => {
             
             {/* Action Buttons */}
             <div className="flex flex-wrap gap-4">
-              <Button className="bg-gradient-primary hover:opacity-90">
-                <Plus className="w-4 h-4 mr-2" />
-                Create Schedule
-              </Button>
-              <Button variant="secondary">
-                <FileText className="w-4 h-4 mr-2" />
-                Import Schedule
-              </Button>
-              <Button variant="outline">
-                <Download className="w-4 h-4 mr-2" />
-                Export Report
-              </Button>
+              <Link to="/create-schedule">
+                <Button className="bg-gradient-primary hover:opacity-90">
+                  <Plus className="w-4 h-4 mr-2" />
+                  Create Schedule
+                </Button>
+              </Link>
+              <Link to="/import-schedule">
+                <Button variant="secondary">
+                  <FileText className="w-4 h-4 mr-2" />
+                  Import Schedule
+                </Button>
+              </Link>
+              <Link to="/export-report">
+                <Button variant="outline">
+                  <Download className="w-4 h-4 mr-2" />
+                  Export Report
+                </Button>
+              </Link>
               <Button variant="outline" size="sm">
                 <Filter className="w-4 h-4 mr-2" />
                 Filter

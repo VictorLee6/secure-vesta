@@ -2,6 +2,7 @@ import VestingCard from "./VestingCard";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { TrendingUp, Shield, Clock, DollarSign, Plus, Eye, Settings } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
   const vestingData = [
@@ -75,14 +76,18 @@ const Dashboard = () => {
               <p className="text-muted-foreground">Monitor your encrypted vesting schedules and token allocations</p>
             </div>
             <div className="flex items-center space-x-3">
-              <Button variant="outline" size="sm">
-                <Eye className="w-4 h-4 mr-2" />
-                View All
-              </Button>
-              <Button className="bg-gradient-primary hover:opacity-90">
-                <Plus className="w-4 h-4 mr-2" />
-                Create Schedule
-              </Button>
+              <Link to="/vesting">
+                <Button variant="outline" size="sm">
+                  <Eye className="w-4 h-4 mr-2" />
+                  View All
+                </Button>
+              </Link>
+              <Link to="/create-schedule">
+                <Button className="bg-gradient-primary hover:opacity-90">
+                  <Plus className="w-4 h-4 mr-2" />
+                  Create Schedule
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
