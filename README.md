@@ -1,100 +1,204 @@
-# Secure Vesta
+# ⏳ Secure Vesta
 
-A confidential token vesting platform built with FHE (Fully Homomorphic Encryption) technology. Secure Vesta enables private vesting schedules for teams and investors with encrypted release conditions that remain confidential until the appropriate time.
+> **Confidential Token Vesting with Time-Lock Encryption**
 
-## Features
+Secure Vesta revolutionizes token vesting through advanced cryptographic techniques, ensuring that vesting schedules remain completely confidential until release conditions are met. Built on Ethereum with FHE (Fully Homomorphic Encryption) technology.
 
-- **Encrypted Vesting Schedules**: Vesting details remain confidential until release conditions are met
-- **Multi-Party Support**: Perfect for team members, advisors, and investor allocations  
-- **Time-Lock Security**: Automated release based on blockchain timestamps and conditions
-- **FHE Integration**: Core data encryption using Fully Homomorphic Encryption
-- **Wallet Integration**: Seamless connection with popular Web3 wallets
+## 🌟 Key Features
 
-## Technology Stack
+### 🔐 **Encrypted Vesting Schedules**
+- Vesting details remain encrypted until release time
+- Zero-knowledge proof capabilities
+- Time-lock security mechanisms
 
-- **Frontend**: React, TypeScript, Vite
-- **UI Components**: shadcn/ui, Tailwind CSS
-- **Web3**: RainbowKit, Wagmi, Viem
-- **Encryption**: FHE (Fully Homomorphic Encryption)
-- **Blockchain**: Ethereum Sepolia Testnet
+### ⏰ **Smart Release Conditions**
+- Time-based automatic releases
+- Milestone-triggered vesting
+- Custom condition support
 
-## Getting Started
+### 👥 **Multi-Party Architecture**
+- Team member allocations
+- Investor vesting schedules
+- Advisor token distributions
+
+### 🛡️ **Advanced Security**
+- FHE encryption for sensitive data
+- Reputation-based verification
+- Access control mechanisms
+
+## 🚀 Quick Start
 
 ### Prerequisites
-
-- Node.js (v18 or higher)
+- Node.js 18+
 - npm or yarn
-- Git
+- Web3 wallet (MetaMask, Rainbow, etc.)
 
 ### Installation
 
-1. Clone the repository:
 ```bash
+# Clone the repository
 git clone https://github.com/VictorLee6/secure-vesta.git
 cd secure-vesta
-```
 
-2. Install dependencies:
-```bash
+# Install dependencies
 npm install
-```
 
-3. Set up environment variables:
-```bash
-cp .env.example .env
-```
+# Set up environment variables
+cp env.example .env
 
-Configure the following environment variables:
-```
-NEXT_PUBLIC_CHAIN_ID=11155111
-NEXT_PUBLIC_RPC_URL=https://sepolia.infura.io/v3/b18fb7e6ca7045ac83c41157ab93f990
-NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID=2ec9743d0d0cd7fb94dee1a7e6d33475
-NEXT_PUBLIC_INFURA_API_KEY=b18fb7e6ca7045ac83c41157ab93f990
-```
-
-4. Start the development server:
-```bash
+# Start development server
 npm run dev
 ```
 
-5. Open [http://localhost:5173](http://localhost:5173) in your browser.
+### Environment Configuration
 
-## Project Structure
+Create a `.env` file with the following variables:
+
+```env
+# Blockchain Configuration
+NEXT_PUBLIC_CHAIN_ID=11155111
+NEXT_PUBLIC_RPC_URL=https://sepolia.infura.io/v3/YOUR_INFURA_KEY
+
+# Wallet Integration
+NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID=YOUR_WALLETCONNECT_ID
+
+# API Configuration
+NEXT_PUBLIC_INFURA_API_KEY=YOUR_INFURA_KEY
+```
+
+## 🏗️ Architecture
+
+### Frontend Stack
+- **React 18** - Modern UI framework
+- **TypeScript** - Type-safe development
+- **Vite** - Fast build tool
+- **Tailwind CSS** - Utility-first styling
+- **shadcn/ui** - Component library
+
+### Web3 Integration
+- **RainbowKit** - Wallet connection
+- **Wagmi** - React hooks for Ethereum
+- **Viem** - TypeScript interface for Ethereum
+
+### Smart Contracts
+- **Solidity** - Smart contract language
+- **FHE Integration** - Fully homomorphic encryption
+- **Sepolia Testnet** - Ethereum test network
+
+## 📁 Project Structure
 
 ```
-src/
-├── components/          # Reusable UI components
-├── pages/            # Application pages
-├── hooks/            # Custom React hooks
-├── lib/              # Utility functions
-└── assets/           # Static assets
+secure-vesta/
+├── contracts/           # Smart contracts
+│   └── SecureVesta.sol  # Main vesting contract
+├── src/
+│   ├── components/      # React components
+│   ├── pages/          # Application pages
+│   ├── lib/            # Utility functions
+│   └── hooks/          # Custom React hooks
+├── public/             # Static assets
+└── scripts/            # Build and deployment scripts
 ```
 
-## Development
+## 🔧 Development
 
 ### Available Scripts
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
+```bash
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run preview      # Preview production build
+npm run lint         # Run ESLint
+npm run type-check   # TypeScript type checking
+```
 
-### Contributing
+### Smart Contract Development
+
+The project includes a comprehensive FHE-enabled vesting contract:
+
+- **Encrypted Data Storage**: All sensitive vesting data is encrypted
+- **Time-Lock Mechanisms**: Automatic release based on blockchain timestamps
+- **Conditional Releases**: Milestone and time-based triggers
+- **Reputation System**: Trust-based verification
+
+## 🚀 Deployment
+
+### Vercel Deployment
+
+1. **Connect Repository**: Import from GitHub to Vercel
+2. **Configure Environment**: Add environment variables
+3. **Deploy**: Automatic deployment on push
+
+### Environment Variables for Production
+
+```env
+NEXT_PUBLIC_CHAIN_ID=11155111
+NEXT_PUBLIC_RPC_URL=https://sepolia.infura.io/v3/YOUR_KEY
+NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID=YOUR_PROJECT_ID
+NEXT_PUBLIC_INFURA_API_KEY=YOUR_INFURA_KEY
+```
+
+## 🔒 Security Considerations
+
+### FHE Implementation
+- All vesting schedules encrypted with FHE
+- Release conditions remain confidential
+- Zero-knowledge proof capabilities
+- Secure multi-party computation
+
+### Smart Contract Security
+- Access control mechanisms
+- Time-lock security
+- Reputation-based verification
+- Emergency pause functionality
+
+## 📊 Use Cases
+
+### 🏢 **Corporate Token Vesting**
+- Employee stock options
+- Executive compensation
+- Long-term incentive plans
+
+### 💼 **Investment Vesting**
+- VC token allocations
+- Angel investor distributions
+- Strategic partnership tokens
+
+### 🎯 **Advisor Programs**
+- Technical advisor tokens
+- Business advisor allocations
+- Community contributor rewards
+
+## 🛠️ Contributing
+
+We welcome contributions! Please see our contributing guidelines:
 
 1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Commit your changes: `git commit -m 'Add amazing feature'`
-4. Push to the branch: `git push origin feature/amazing-feature`
-5. Open a Pull Request
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
 
-## Security
-
-This project implements FHE (Fully Homomorphic Encryption) to ensure that vesting schedules and sensitive data remain encrypted and confidential. The encryption ensures that even the contract deployer cannot access the vesting details until the appropriate release conditions are met.
-
-## License
+## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Support
+## 🤝 Support
 
-For support and questions, please open an issue in the GitHub repository.
+- **Documentation**: Check the `/docs` directory
+- **Issues**: Create a GitHub issue
+- **Discussions**: Use GitHub Discussions
+- **Security**: Report security issues privately
+
+## 🔗 Links
+
+- **Live Demo**: [Deployed on Vercel]
+- **Documentation**: [Project Wiki]
+- **Smart Contract**: [Etherscan Sepolia]
+- **Community**: [Discord Server]
+
+---
+
+**Built with ❤️ for the decentralized future**
+
+*Secure Vesta - Where time meets encryption*

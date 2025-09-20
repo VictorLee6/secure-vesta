@@ -7,7 +7,7 @@ Secure Vesta is a confidential token vesting platform built with FHE (Fully Homo
 ## ✅ Completed Tasks
 
 ### 1. Repository Setup
-- ✅ Cloned secure-vesta project from VictorLee6/secure-vesta
+- ✅ Cloned secure-vesta project from GitHub
 - ✅ Used proxy configuration for GitHub access
 - ✅ Configured git with proper user credentials
 
@@ -54,7 +54,7 @@ Secure Vesta is a confidential token vesting platform built with FHE (Fully Homo
 ### 7. GitHub Integration
 - ✅ Cleared all Lovable commit history
 - ✅ Created new clean commit history
-- ✅ Pushed all changes to VictorLee6/secure-vesta repository
+- ✅ Pushed all changes to repository
 - ✅ Used PAT token for authentication
 
 ### 8. Deployment Preparation
@@ -146,9 +146,9 @@ secure-vesta/
 ### Environment Variables Required
 ```
 NEXT_PUBLIC_CHAIN_ID=11155111
-NEXT_PUBLIC_RPC_URL=https://sepolia.infura.io/v3/b18fb7e6ca7045ac83c41157ab93f990
-NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID=2ec9743d0d0cd7fb94dee1a7e6d33475
-NEXT_PUBLIC_INFURA_API_KEY=b18fb7e6ca7045ac83c41157ab93f990
+NEXT_PUBLIC_RPC_URL=https://sepolia.infura.io/v3/YOUR_INFURA_KEY
+NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID=YOUR_WALLETCONNECT_ID
+NEXT_PUBLIC_INFURA_API_KEY=YOUR_INFURA_KEY
 ```
 
 ## 🔒 Security Features

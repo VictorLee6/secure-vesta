@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { WalletButton } from "@/components/WalletButton";
-import { Shield, Clock, Users, Lock } from "lucide-react";
+import { Clock, Users, Key, Timer, Zap, Globe } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -34,7 +34,7 @@ const HeroSection = () => {
           {/* Feature Grid */}
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="glass-card p-6 text-center">
-              <Lock className="w-8 h-8 text-primary mx-auto mb-4 pulse-glow" />
+              <Key className="w-8 h-8 text-primary mx-auto mb-4 pulse-glow" />
               <h3 className="font-semibold mb-2">Encrypted Schedules</h3>
               <p className="text-sm text-muted-foreground">
                 Vesting details remain confidential until release conditions are met
@@ -50,7 +50,7 @@ const HeroSection = () => {
             </div>
             
             <div className="glass-card p-6 text-center">
-              <Clock className="w-8 h-8 text-primary mx-auto mb-4 pulse-glow" />
+              <Timer className="w-8 h-8 text-primary mx-auto mb-4 pulse-glow" />
               <h3 className="font-semibold mb-2">Time-Lock Security</h3>
               <p className="text-sm text-muted-foreground">
                 Automated release based on blockchain timestamps and conditions

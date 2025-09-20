@@ -31,7 +31,7 @@ git push origin main
 1. Log into your Vercel dashboard
 2. Click "New Project"
 3. Select "Import Git Repository"
-4. Choose `VictorLee6/secure-vesta` from the list
+4. Choose your repository from the list
 5. Click "Import"
 
 ### 4. Configure Build Settings
@@ -50,18 +50,18 @@ In the Vercel dashboard, go to your project settings and add the following envir
 
 ```
 NEXT_PUBLIC_CHAIN_ID=11155111
-NEXT_PUBLIC_RPC_URL=https://sepolia.infura.io/v3/b18fb7e6ca7045ac83c41157ab93f990
-NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID=2ec9743d0d0cd7fb94dee1a7e6d33475
-NEXT_PUBLIC_INFURA_API_KEY=b18fb7e6ca7045ac83c41157ab93f990
+NEXT_PUBLIC_RPC_URL=https://sepolia.infura.io/v3/YOUR_INFURA_KEY
+NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID=YOUR_WALLETCONNECT_ID
+NEXT_PUBLIC_INFURA_API_KEY=YOUR_INFURA_KEY
 ```
 
-**Important**: Make sure to add these as environment variables in Vercel, not in your local `.env` file.
+**Important**: Replace the placeholder values with your actual API keys and configuration.
 
 ### 6. Deploy the Project
 
 1. Click "Deploy" to start the deployment process
 2. Wait for the build to complete (usually 2-3 minutes)
-3. Once deployed, you'll receive a URL like `https://secure-vesta-xxx.vercel.app`
+3. Once deployed, you'll receive a URL like `https://your-project.vercel.app`
 
 ### 7. Configure Custom Domain (Optional)
 
@@ -79,12 +79,12 @@ NEXT_PUBLIC_INFURA_API_KEY=b18fb7e6ca7045ac83c41157ab93f990
 
 ## Environment Variables Reference
 
-| Variable | Value | Description |
-|----------|-------|-------------|
-| `NEXT_PUBLIC_CHAIN_ID` | `11155111` | Ethereum Sepolia testnet chain ID |
-| `NEXT_PUBLIC_RPC_URL` | `https://sepolia.infura.io/v3/...` | RPC endpoint for blockchain interactions |
-| `NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID` | `2ec9743d0d0cd7fb94dee1a7e6d33475` | WalletConnect project ID for wallet connections |
-| `NEXT_PUBLIC_INFURA_API_KEY` | `b18fb7e6ca7045ac83c41157ab93f990` | Infura API key for blockchain access |
+| Variable | Description | Example Value |
+|----------|-------------|---------------|
+| `NEXT_PUBLIC_CHAIN_ID` | Ethereum Sepolia testnet chain ID | `11155111` |
+| `NEXT_PUBLIC_RPC_URL` | RPC endpoint for blockchain interactions | `https://sepolia.infura.io/v3/YOUR_KEY` |
+| `NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID` | WalletConnect project ID for wallet connections | `YOUR_WALLETCONNECT_ID` |
+| `NEXT_PUBLIC_INFURA_API_KEY` | Infura API key for blockchain access | `YOUR_INFURA_KEY` |
 
 ## Build Configuration
 
