@@ -24,13 +24,13 @@ const Header = () => {
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#dashboard" className="text-sm text-foreground hover:text-primary transition-colors">
+            <a href="/dashboard" className="text-sm text-foreground hover:text-primary transition-colors">
               Dashboard
             </a>
-            <a href="#vesting" className="text-sm text-foreground hover:text-primary transition-colors">
+            <a href="/vesting" className="text-sm text-foreground hover:text-primary transition-colors">
               My Vesting
             </a>
-            <a href="#analytics" className="text-sm text-foreground hover:text-primary transition-colors">
+            <a href="/analytics" className="text-sm text-foreground hover:text-primary transition-colors">
               Analytics
             </a>
           </nav>
