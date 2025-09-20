@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { WalletButton } from "@/components/WalletButton";
 import { Shield, Clock, Users, Lock } from "lucide-react";
 
 const HeroSection = () => {
@@ -24,10 +25,7 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Button size="lg" className="bg-gradient-primary hover:opacity-90 font-mono">
-              <Shield className="w-5 h-5 mr-2" />
-              Connect Wallet
-            </Button>
+            <WalletButton />
             <Button variant="outline" size="lg" className="border-primary/50 text-primary hover:bg-primary/10">
               View Demo
             </Button>

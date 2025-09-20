@@ -1,5 +1,4 @@
-import { Wallet } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { WalletButton } from "@/components/WalletButton";
 import hourglassLogo from "@/assets/hourglass-logo.png";
 
 const Header = () => {
@@ -36,10 +35,7 @@ const Header = () => {
           </nav>
 
           {/* Connect Wallet Button */}
-          <Button className="bg-gradient-primary hover:opacity-90 font-mono" size="sm">
-            <Wallet className="w-4 h-4 mr-2" />
-            Connect Wallet
-          </Button>
+          <WalletButton />
         </div>
       </div>
     </header>
